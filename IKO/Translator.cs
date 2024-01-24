@@ -62,7 +62,6 @@ namespace IKO
             string prefabName = row.Key.ToString();
             string text = row.Value.ToString();
 
-            Jotunn.Logger.LogInfo(text);
             Localization.instance.AddWord(prefabName, text);
         }
 
@@ -87,7 +86,6 @@ namespace IKO
                         field = type.GetField("m_name", BindingFlags.Instance | BindingFlags.Public);
                     }
                 }
-                Jotunn.Logger.LogInfo(text);
                 field.SetValue(obj, text);
             }
             catch (Exception ex)

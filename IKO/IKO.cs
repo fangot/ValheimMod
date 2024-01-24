@@ -1,5 +1,7 @@
 using System;
+using System.Reflection;
 using BepInEx;
+using HarmonyLib;
 using Jotunn.Managers;
 
 namespace IKO
@@ -12,8 +14,11 @@ namespace IKO
         public const string PluginName = "IKO";
         public const string PluginVersion = "0.0.1";
 
+        private Harmony _harmony;
+
         private void Awake()
         {
+            _harmony = Harmony.CreateAndPatchAll(Assembly.GetExecutingAssembly(), "iko.mods.equipmentandquickslots");
             PrefabManager.OnPrefabsRegistered += () => {
                 try
                 {

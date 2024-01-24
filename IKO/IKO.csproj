@@ -46,6 +46,7 @@
     <StartWorkingDirectory>$(VALHEIM_INSTALL)</StartWorkingDirectory>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="EaQS.cs" />
     <Compile Include="Properties\IgnoreAccessModifiers.cs" />
     <Compile Include="IKO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
