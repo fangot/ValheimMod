@@ -47,10 +47,12 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="EaQS.cs" />
+    <Compile Include="kgID.cs" />
     <Compile Include="LangYml.cs" />
     <Compile Include="Properties\IgnoreAccessModifiers.cs" />
     <Compile Include="IKO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SPME.cs" />
     <Compile Include="Translator.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -83,6 +85,9 @@
     </Reference>
     <Reference Include="Jotunn">
       <HintPath>..\Lib\Jotunn.dll</HintPath>
+    </Reference>
+    <Reference Include="kg_ItemDrawers">
+      <HintPath>G:\Steam\steamapps\common\Valheim\BepInEx\plugins\kg_ItemDrawers.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />

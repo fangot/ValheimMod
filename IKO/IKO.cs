@@ -18,7 +18,7 @@ namespace IKO
 
         private void Awake()
         {
-            _harmony = Harmony.CreateAndPatchAll(Assembly.GetExecutingAssembly(), "iko.mods.equipmentandquickslots");
+            _harmony = Harmony.CreateAndPatchAll(Assembly.GetExecutingAssembly(), "iko.mods.fangot");
             PrefabManager.OnPrefabsRegistered += () => {
                 try
                 {

@@ -8,7 +8,7 @@ namespace IKO
 {
     public static class LangYml
     {
-        private static readonly string langPath = Path.Combine(Paths.BepInExRootPath, "plugins\\IKO\\lang.yml");
+        private static readonly string langPath = Path.Combine(Paths.PluginPath, "IKO\\lang.yml");
         private static Dictionary<string, Dictionary<string, string>> lang;
 
         static LangYml()
@@ -24,11 +24,14 @@ namespace IKO
 
         public static Dictionary<string, string> GetLocalList(string group)
         {
-            foreach (KeyValuePair<string, Dictionary<string, string>> item in lang)
+            if (lang.ContainsKey(group))
             {
-                if (item.Key == group)
+                foreach (KeyValuePair<string, Dictionary<string, string>> item in lang)
                 {
-                    return item.Value;
+                    if (item.Key == group)
+                    {
+                        return item.Value;
+                    }
                 }
             }
 
