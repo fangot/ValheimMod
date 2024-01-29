@@ -47,8 +47,12 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="EaQS.cs" />
-    <Compile Include="kgID.cs" />
+    <Compile Include="KgID.cs" />
     <Compile Include="LangYml.cs" />
+    <Compile Include="VanilaHoverable.cs" />
+    <Compile Include="VanilaLocalization.cs" />
+    <Compile Include="VanilaLocalizationDescription.cs" />
+    <Compile Include="Localy.cs" />
     <Compile Include="Properties\IgnoreAccessModifiers.cs" />
     <Compile Include="IKO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

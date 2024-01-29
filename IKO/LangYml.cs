@@ -9,7 +9,7 @@ namespace IKO
     public static class LangYml
     {
         private static readonly string langPath = Path.Combine(Paths.PluginPath, "IKO\\lang.yml");
-        private static Dictionary<string, Dictionary<string, string>> lang;
+        private static readonly Dictionary<string, Dictionary<string, string>> lang;
 
         static LangYml()
         {
@@ -17,7 +17,7 @@ namespace IKO
             {
                 return;
             }
-            using StreamReader input = new StreamReader(langPath);
+            using StreamReader input = new(langPath);
             IDeserializer deserializer = new DeserializerBuilder().WithNamingConvention(CamelCaseNamingConvention.Instance).Build();
             lang = deserializer.Deserialize<Dictionary<string, Dictionary<string, string>>>(input);
         }
